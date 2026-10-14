@@ -1,0 +1,23 @@
+:root{
+  --primary:#1677ff;--primary-hover:#0958d9;--success:#52c41a;--warning:#fa8c16;--danger:#ff4d4f;
+  --text:#262626;--secondary:#595959;--muted:#8c8c8c;--border:#d9d9d9;--line:#f0f0f0;
+  --page:#f0f2f5;--white:#fff;--font:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",Arial,sans-serif;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html,body{min-height:100%}
+body{font-family:var(--font);font-size:14px;line-height:1.5;color:var(--text);background:var(--page);-webkit-font-smoothing:antialiased}
+button,input,select,textarea{font:inherit}
+button{cursor:pointer}
+.btn{display:inline-flex;align-items:center;justify-content:center;height:32px;padding:0 16px;border:1px solid var(--border);border-radius:2px;background:#fff;color:var(--text);white-space:nowrap}
+.btn:hover{color:var(--primary);border-color:var(--primary)}
+.btn+.btn{margin-left:8px}
+.btn-primary{color:#fff;background:var(--primary);border-color:var(--primary)}
+.btn-primary:hover{color:#fff;background:var(--primary-hover);border-color:var(--primary-hover)}
+.btn:disabled{color:#bfbfbf;background:#f5f5f5;border-color:#d9d9d9;cursor:not-allowed}
+.tag{display:inline-flex;align-items:center;padding:1px 8px;border:1px solid #91caff;border-radius:2px;color:#1677ff;background:#e6f4ff;font-size:12px;white-space:nowrap}
+.tag.green{color:#389e0d;background:#f6ffed;border-color:#b7eb8f}.tag.orange{color:#d46b08;background:#fff7e6;border-color:#ffd591}.tag.gray{color:#595959;background:#fafafa;border-color:#d9d9d9}.tag.red{color:#cf1322;background:#fff2f0;border-color:#ffccc7}
+.modal-overlay{position:fixed;inset:0;z-index:10000;display:flex;align-items:center;justify-content:center;padding:20px;background:rgba(0,0,0,.45)}
+.modal-content{width:480px;max-width:92vw;max-height:86vh;overflow:auto;background:#fff;border-radius:4px;box-shadow:0 8px 28px rgba(0,0,0,.18)}
+.modal-header,.modal-footer{display:flex;align-items:center;justify-content:space-between;padding:16px 22px;border-bottom:1px solid var(--line)}
+.modal-footer{justify-content:flex-end;border-top:1px solid var(--line);border-bottom:0}.modal-header h2{font-size:18px}.modal-body{padding:22px}.modal-close{border:0;background:transparent;color:#8c8c8c;font-size:24px;line-height:1}
+.toast{position:fixed;left:50%;top:76px;z-index:20000;transform:translate(-50%,-15px);padding:10px 18px;border-radius:4px;background:rgba(0,0,0,.82);color:#fff;opacity:0;transition:.2s}.toast.show{opacity:1;transform:translate(-50%,0)}

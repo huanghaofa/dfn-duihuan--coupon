@@ -1,0 +1,9 @@
+{
+  "menu": [
+    {"key":"mobile","label":"前台原型（App / 小程序）","icon":"▣","children":[
+      {"key":"wallet","label":"卡券中心"},
+      {"key":"redeem","label":"GUI皮肤兑换流程"},
+      {"key":"redeemed","label":"卡券详情"}
+    ]}
+  ]
+}

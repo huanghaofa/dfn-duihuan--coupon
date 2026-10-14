@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="description" content="GUI 商品兑换券 App 端从卡包到逐商品兑换结果的静态原型">
+  <link rel="icon" href="data:,">
+  <title>GUI 商品兑换券 App 端原型</title>
+  <link rel="stylesheet" href="assets/css/global.css?v=20261014-8">
+  <link rel="stylesheet" href="assets/css/app.css?v=20261014-8">
+  <link rel="stylesheet" href="annotations/annotation.css?v=20261014-8">
+</head>
+<body>
+  <div class="app-layout">
+    <nav id="main-nav" class="app-sidebar"></nav>
+    <main id="app" class="app-main" aria-live="polite"></main>
+  </div>
+  <script src="mock/data.js?v=20261014-8"></script>
+  <script src="js/common.js?v=20261014-8"></script>
+  <script src="js/app.js?v=20261014-8"></script>
+  <script src="js/nav.js?v=20261014-8"></script>
+  <script>
+    window.AnnotationConfig={
+      enabled:true,
+      mode:'b-drawer',
+      projectId:'gui-4eb41cd9',
+      dataVersion:'20261014-8',
+      page:function(){return window.getCurrentPage?window.getCurrentPage():'wallet';},
+      pageTitle:function(){
+        var names={wallet:'卡券中心 · 原型标注',redeem:'GUI皮肤兑换 · 原型标注',redeemed:'卡券详情 · 原型标注'};
+        return names[window.getCurrentPage?window.getCurrentPage():'wallet']||'本页交互与规则';
+      },
+      revealTarget:function(anno){return window.revealGUIAnnotation?window.revealGUIAnnotation(anno):null;}
+    };
+  </script>
+  <script src="annotations/annotations.js?v=20261014-8"></script>
+  <script src="annotations/annotation-runtime.js?v=20261014-8"></script>
+</body>
+</html>
